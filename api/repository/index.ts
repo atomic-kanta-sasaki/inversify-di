@@ -19,4 +19,7 @@ export class UserRepository implements IUserRepository {
     create(user: User): void {
         // prisma.create({}) ...
     }
+    put(user: User): void {
+        // prisma.update({}) ...
+    }
 }
