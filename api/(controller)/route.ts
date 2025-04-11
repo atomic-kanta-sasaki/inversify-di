@@ -21,3 +21,18 @@ export const POST = () => {
     const user = service.create(body)
     return NextResponse.json('ok')
 }
+
+export const PUT = () => {
+    const service = diContainer.get<IUserService>(TYPES.IUserService)
+
+    const body: User = {
+        id: 'user0002',
+        name: 'sasaki2',
+        address: '東京都港区...',
+        email: 'sasaki2@sios.jp'
+    }
+
+    const user = service.put(body)
+
+    return NextResponse.json('ok')
+}
